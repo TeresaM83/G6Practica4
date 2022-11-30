@@ -38,8 +38,8 @@ public class ClienteServiceImpl implements ClienteService {
 		
 		for (HospitalDTO hospitalDTO : listado) {
 			fk = new ClienteHospitalFK();
-			fk.setIdCliente(hospitalDTO.getCod());
-			fk.setIdHospital(1);
+			fk.setIdHospital(hospitalDTO.getIdDto());
+			fk.setIdCliente(1);
 			
 			detalle = new ClienteDetalle();
 			detalle.setFk(fk);
